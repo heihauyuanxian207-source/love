@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Heart Rain</title>
+
+<style>
+body{
+margin:0;
+overflow:hidden;
+background:black;
+}
+
+.heart{
+position:absolute;
+color:red;
+font-size:20px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(-10vh);
+}
+
+100%{
+transform:translateY(110vh);
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<script>
+
+for(let i=0;i<100;i++){
+
+let heart=document.createElement("div")
+heart.className="heart"
+heart.innerHTML="❤️"
+
+heart.style.left=Math.random()*100+"vw"
+heart.style.fontSize=10+Math.random()*30+"px"
+heart.style.animationDuration=2+Math.random()*5+"s"
+
+document.body.appendChild(heart)
+
+}
+
+</script>
+
+</body>
+</html>
